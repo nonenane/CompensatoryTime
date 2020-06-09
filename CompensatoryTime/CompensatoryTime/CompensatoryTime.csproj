@@ -33,10 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EPPlus">
-      <HintPath>..\..\..\..\frameWork_mew\Framework\bin\Debug\EPPlus.dll</HintPath>
+      <HintPath>..\..\..\..\DLL\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="Framework">
-      <HintPath>..\..\..\..\frameWork_mew\Framework\bin\Debug\Framework.dll</HintPath>
+      <HintPath>..\..\..\..\DLL\Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,6 +73,12 @@
     <Compile Include="users\frmSelect.Designer.cs">
       <DependentUpon>frmSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="users\frmViewUserWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users\frmViewUserWork.Designer.cs">
+      <DependentUpon>frmViewUserWork.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmList.resx">
       <DependentUpon>frmList.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="users\frmSelect.resx">
       <DependentUpon>frmSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users\frmViewUserWork.resx">
+      <DependentUpon>frmViewUserWork.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

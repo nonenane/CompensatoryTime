@@ -29,26 +29,21 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btClose = new System.Windows.Forms.Button();
+            this.btDel = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btEdit = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.btViewWorkUser = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbDateInvent = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbShop = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button10 = new System.Windows.Forms.Button();
             this.cSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cFIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,31 +51,40 @@
             this.cTypeExeption = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cMoneyBonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cDayBonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbFio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbDateInvent = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btClose
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(867, 565);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 32);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btClose.Location = new System.Drawing.Point(867, 565);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(32, 32);
+            this.btClose.TabIndex = 0;
+            this.btClose.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btDel
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackgroundImage = global::CompensatoryTime.Properties.Resources.Trash;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Location = new System.Drawing.Point(829, 565);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 32);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDel.BackgroundImage = global::CompensatoryTime.Properties.Resources.Trash;
+            this.btDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btDel.Location = new System.Drawing.Point(829, 565);
+            this.btDel.Name = "btDel";
+            this.btDel.Size = new System.Drawing.Size(32, 32);
+            this.btDel.TabIndex = 0;
+            this.btDel.UseVisualStyleBackColor = true;
+            this.btDel.Click += new System.EventHandler(this.btDel_Click);
             // 
             // button3
             // 
@@ -92,37 +96,40 @@
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btEdit
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackgroundImage = global::CompensatoryTime.Properties.Resources.Edit;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Location = new System.Drawing.Point(753, 565);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 32);
-            this.button4.TabIndex = 0;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btEdit.BackgroundImage = global::CompensatoryTime.Properties.Resources.Edit;
+            this.btEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btEdit.Location = new System.Drawing.Point(753, 565);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.Size = new System.Drawing.Size(32, 32);
+            this.btEdit.TabIndex = 0;
+            this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
-            // button5
+            // btAdd
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackgroundImage = global::CompensatoryTime.Properties.Resources.Add;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.Location = new System.Drawing.Point(715, 565);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 32);
-            this.button5.TabIndex = 0;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAdd.BackgroundImage = global::CompensatoryTime.Properties.Resources.Add;
+            this.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btAdd.Location = new System.Drawing.Point(715, 565);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(32, 32);
+            this.btAdd.TabIndex = 0;
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
-            // button6
+            // btViewWorkUser
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button6.Location = new System.Drawing.Point(677, 565);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(32, 32);
-            this.button6.TabIndex = 0;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btViewWorkUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btViewWorkUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btViewWorkUser.Location = new System.Drawing.Point(677, 565);
+            this.btViewWorkUser.Name = "btViewWorkUser";
+            this.btViewWorkUser.Size = new System.Drawing.Size(32, 32);
+            this.btViewWorkUser.TabIndex = 0;
+            this.btViewWorkUser.UseVisualStyleBackColor = true;
+            this.btViewWorkUser.Click += new System.EventHandler(this.btViewWorkUser_Click);
             // 
             // button7
             // 
@@ -203,6 +210,14 @@
             this.cTypeExeption,
             this.cMoneyBonus,
             this.cDayBonus});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData.Location = new System.Drawing.Point(12, 132);
             this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
@@ -210,13 +225,83 @@
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(887, 427);
             this.dgvData.TabIndex = 3;
+            this.dgvData.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvData_ColumnWidthChanged);
+            this.dgvData.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvData_RowPostPaint);
+            this.dgvData.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvData_RowPrePaint);
             // 
-            // textBox1
+            // cSelect
             // 
-            this.textBox1.Location = new System.Drawing.Point(328, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.cSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cSelect.DataPropertyName = "isSelect";
+            this.cSelect.HeaderText = "V";
+            this.cSelect.MinimumWidth = 35;
+            this.cSelect.Name = "cSelect";
+            this.cSelect.Width = 35;
+            // 
+            // cShop
+            // 
+            this.cShop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cShop.DataPropertyName = "nameShop";
+            this.cShop.FillWeight = 259.2592F;
+            this.cShop.HeaderText = "Магазин";
+            this.cShop.MinimumWidth = 70;
+            this.cShop.Name = "cShop";
+            this.cShop.ReadOnly = true;
+            this.cShop.Width = 70;
+            // 
+            // cFIO
+            // 
+            this.cFIO.DataPropertyName = "fio";
+            this.cFIO.FillWeight = 68.14815F;
+            this.cFIO.HeaderText = "ФИО";
+            this.cFIO.Name = "cFIO";
+            this.cFIO.ReadOnly = true;
+            // 
+            // cDeps
+            // 
+            this.cDeps.DataPropertyName = "nameDeps";
+            this.cDeps.FillWeight = 68.14815F;
+            this.cDeps.HeaderText = "Отдел";
+            this.cDeps.Name = "cDeps";
+            this.cDeps.ReadOnly = true;
+            // 
+            // cTypeExeption
+            // 
+            this.cTypeExeption.DataPropertyName = "nameExpType";
+            this.cTypeExeption.FillWeight = 68.14815F;
+            this.cTypeExeption.HeaderText = "Тип исключения";
+            this.cTypeExeption.Name = "cTypeExeption";
+            this.cTypeExeption.ReadOnly = true;
+            // 
+            // cMoneyBonus
+            // 
+            this.cMoneyBonus.DataPropertyName = "Summa";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.cMoneyBonus.DefaultCellStyle = dataGridViewCellStyle2;
+            this.cMoneyBonus.FillWeight = 68.14815F;
+            this.cMoneyBonus.HeaderText = "Вознаграждение денежное";
+            this.cMoneyBonus.Name = "cMoneyBonus";
+            this.cMoneyBonus.ReadOnly = true;
+            // 
+            // cDayBonus
+            // 
+            this.cDayBonus.DataPropertyName = "CountDays";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cDayBonus.DefaultCellStyle = dataGridViewCellStyle3;
+            this.cDayBonus.FillWeight = 68.14815F;
+            this.cDayBonus.HeaderText = "Вознаграждение отгулы";
+            this.cDayBonus.Name = "cDayBonus";
+            this.cDayBonus.ReadOnly = true;
+            // 
+            // tbFio
+            // 
+            this.tbFio.Location = new System.Drawing.Point(328, 106);
+            this.tbFio.Name = "tbFio";
+            this.tbFio.Size = new System.Drawing.Size(100, 20);
+            this.tbFio.TabIndex = 4;
+            this.tbFio.TextChanged += new System.EventHandler(this.tbFio_TextChanged);
             // 
             // label2
             // 
@@ -235,6 +320,7 @@
             this.cmbDateInvent.Name = "cmbDateInvent";
             this.cmbDateInvent.Size = new System.Drawing.Size(195, 21);
             this.cmbDateInvent.TabIndex = 6;
+            this.cmbDateInvent.SelectionChangeCommitted += new System.EventHandler(this.cmbDateInvent_SelectionChangeCommitted);
             // 
             // label3
             // 
@@ -253,6 +339,7 @@
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(195, 21);
             this.cmbShop.TabIndex = 6;
+            this.cmbShop.SelectionChangeCommitted += new System.EventHandler(this.cmbShop_SelectionChangeCommitted);
             // 
             // groupBox1
             // 
@@ -272,60 +359,17 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(457, 67);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button10
+            // btUpdate
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.BackgroundImage = global::CompensatoryTime.Properties.Resources.refresh;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button10.Location = new System.Drawing.Point(867, 29);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(32, 32);
-            this.button10.TabIndex = 0;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // cSelect
-            // 
-            this.cSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cSelect.HeaderText = "V";
-            this.cSelect.MinimumWidth = 35;
-            this.cSelect.Name = "cSelect";
-            this.cSelect.Width = 35;
-            // 
-            // cShop
-            // 
-            this.cShop.HeaderText = "Магазин";
-            this.cShop.Name = "cShop";
-            this.cShop.ReadOnly = true;
-            // 
-            // cFIO
-            // 
-            this.cFIO.HeaderText = "ФИО";
-            this.cFIO.Name = "cFIO";
-            this.cFIO.ReadOnly = true;
-            // 
-            // cDeps
-            // 
-            this.cDeps.HeaderText = "Отдел";
-            this.cDeps.Name = "cDeps";
-            this.cDeps.ReadOnly = true;
-            // 
-            // cTypeExeption
-            // 
-            this.cTypeExeption.HeaderText = "Тип исключения";
-            this.cTypeExeption.Name = "cTypeExeption";
-            this.cTypeExeption.ReadOnly = true;
-            // 
-            // cMoneyBonus
-            // 
-            this.cMoneyBonus.HeaderText = "Вознаграждение денежное";
-            this.cMoneyBonus.Name = "cMoneyBonus";
-            this.cMoneyBonus.ReadOnly = true;
-            // 
-            // cDayBonus
-            // 
-            this.cDayBonus.HeaderText = "Вознаграждение отгулы";
-            this.cDayBonus.Name = "cDayBonus";
-            this.cDayBonus.ReadOnly = true;
+            this.btUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btUpdate.BackgroundImage = global::CompensatoryTime.Properties.Resources.refresh;
+            this.btUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btUpdate.Location = new System.Drawing.Point(867, 29);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(32, 32);
+            this.btUpdate.TabIndex = 0;
+            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // frmList
             // 
@@ -337,24 +381,24 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbDateInvent);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbFio);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btViewWorkUser);
+            this.Controls.Add(this.btAdd);
+            this.Controls.Add(this.btEdit);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btDel);
+            this.Controls.Add(this.btUpdate);
+            this.Controls.Add(this.btClose);
             this.MinimizeBox = false;
             this.Name = "frmList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Справочник исключений";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmList_FormClosing);
             this.Load += new System.EventHandler(this.frmList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -366,25 +410,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.Button btDel;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btEdit;
+        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Button btViewWorkUser;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvData;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbFio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbDateInvent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn cSelect;
         private System.Windows.Forms.DataGridViewTextBoxColumn cShop;

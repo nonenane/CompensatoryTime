@@ -41,12 +41,12 @@
             this.cmbTypeExeptions = new System.Windows.Forms.ComboBox();
             this.chbIsBonusValidate = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbDays = new System.Windows.Forms.RadioButton();
             this.rbMoney = new System.Windows.Forms.RadioButton();
-            this.tbMoney = new System.Windows.Forms.TextBox();
+            this.rbDays = new System.Windows.Forms.RadioButton();
             this.tbDays = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.tbMoney = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,6 +118,7 @@
             this.btSelectUser.TabIndex = 4;
             this.btSelectUser.Text = "...";
             this.btSelectUser.UseVisualStyleBackColor = true;
+            this.btSelectUser.Click += new System.EventHandler(this.btSelectUser_Click);
             // 
             // cmbShop
             // 
@@ -127,6 +128,7 @@
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(213, 21);
             this.cmbShop.TabIndex = 8;
+            this.cmbShop.SelectionChangeCommitted += new System.EventHandler(this.cmbShop_SelectionChangeCommitted);
             // 
             // lShop
             // 
@@ -166,6 +168,7 @@
             this.chbIsBonusValidate.TabIndex = 9;
             this.chbIsBonusValidate.Text = "Дополнительный подсчет";
             this.chbIsBonusValidate.UseVisualStyleBackColor = true;
+            this.chbIsBonusValidate.Click += new System.EventHandler(this.chbIsBonusValidate_Click);
             // 
             // groupBox1
             // 
@@ -182,17 +185,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Вид компенсации";
             // 
-            // rbDays
-            // 
-            this.rbDays.AutoSize = true;
-            this.rbDays.Location = new System.Drawing.Point(165, 20);
-            this.rbDays.Name = "rbDays";
-            this.rbDays.Size = new System.Drawing.Size(60, 17);
-            this.rbDays.TabIndex = 0;
-            this.rbDays.Text = "отгулы";
-            this.rbDays.UseVisualStyleBackColor = true;
-            this.rbDays.CheckedChanged += new System.EventHandler(this.rbMoney_CheckedChanged);
-            // 
             // rbMoney
             // 
             this.rbMoney.AutoSize = true;
@@ -206,15 +198,16 @@
             this.rbMoney.UseVisualStyleBackColor = true;
             this.rbMoney.CheckedChanged += new System.EventHandler(this.rbMoney_CheckedChanged);
             // 
-            // tbMoney
+            // rbDays
             // 
-            this.tbMoney.Location = new System.Drawing.Point(19, 43);
-            this.tbMoney.MaxLength = 13;
-            this.tbMoney.Name = "tbMoney";
-            this.tbMoney.Size = new System.Drawing.Size(94, 20);
-            this.tbMoney.TabIndex = 3;
-            this.tbMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tbMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMoney_KeyPress);
+            this.rbDays.AutoSize = true;
+            this.rbDays.Location = new System.Drawing.Point(165, 20);
+            this.rbDays.Name = "rbDays";
+            this.rbDays.Size = new System.Drawing.Size(60, 17);
+            this.rbDays.TabIndex = 0;
+            this.rbDays.Text = "отгулы";
+            this.rbDays.UseVisualStyleBackColor = true;
+            this.rbDays.CheckedChanged += new System.EventHandler(this.rbMoney_CheckedChanged);
             // 
             // tbDays
             // 
@@ -227,14 +220,15 @@
             this.tbDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbDays.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMoney_KeyPress);
             // 
-            // label5
+            // tbMoney
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(119, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "руб.";
+            this.tbMoney.Location = new System.Drawing.Point(19, 43);
+            this.tbMoney.MaxLength = 8;
+            this.tbMoney.Name = "tbMoney";
+            this.tbMoney.Size = new System.Drawing.Size(94, 20);
+            this.tbMoney.TabIndex = 3;
+            this.tbMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMoney_KeyPress);
             // 
             // label6
             // 
@@ -244,6 +238,15 @@
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "дней.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(119, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "руб.";
             // 
             // frmAdd
             // 
@@ -267,6 +270,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAdd";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdd";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdd_FormClosing);

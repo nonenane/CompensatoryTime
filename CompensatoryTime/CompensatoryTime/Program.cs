@@ -30,13 +30,13 @@ namespace CompensatoryTime
                     Logging.Comment("Вход в программу");
                     Logging.StopFirstLevel();
 
-                    Application.Run(new users.frmAdd());
+                    //Application.Run(new users.frmAdd());
                     //Application.Run(new ArchiveDocAddDoc.frmAddDoc(){Text = "Добавление документа"});
                     //Application.Run(new FeedBack.frmList());
                     //Application.Run(new WebSites.frmList());
                     //Application.Run(new Report.frmReport());
 
-                    //Application.Run(new frmList());
+                    Application.Run(new frmList());
 
                     Logging.StartFirstLevel(2);
                     Logging.Comment("Выход из программы");
