@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CompensatoryTime
+namespace CompensatoryTime.users
 {
-    public partial class Form1 : Form
+    public partial class frmSelect : Form
     {
-        public Form1()
+        public frmSelect()
         {
             InitializeComponent();
         }
