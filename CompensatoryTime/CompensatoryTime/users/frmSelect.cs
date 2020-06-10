@@ -20,6 +20,11 @@ namespace CompensatoryTime.users
         public frmSelect()
         {
             InitializeComponent();
+
+            ToolTip tp = new ToolTip();
+            tp.SetToolTip(btClose, "Выход");
+            tp.SetToolTip(btSelect, "Выбрать");
+
             dgvData.AutoGenerateColumns = false;
         }
 

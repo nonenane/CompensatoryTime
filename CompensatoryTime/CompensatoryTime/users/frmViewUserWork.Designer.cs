@@ -33,12 +33,12 @@
             this.tbFio = new System.Windows.Forms.TextBox();
             this.lUsers = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.button9 = new System.Windows.Forms.Button();
-            this.btClose = new System.Windows.Forms.Button();
             this.cPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cDeps = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTimeStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTimeEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btPrint = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,31 +96,8 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(613, 534);
+            this.dgvData.Size = new System.Drawing.Size(613, 384);
             this.dgvData.TabIndex = 6;
-            // 
-            // button9
-            // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.BackgroundImage = global::CompensatoryTime.Properties.Resources.Print;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button9.Location = new System.Drawing.Point(555, 578);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(32, 32);
-            this.button9.TabIndex = 7;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // btClose
-            // 
-            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
-            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btClose.Location = new System.Drawing.Point(593, 578);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(32, 32);
-            this.btClose.TabIndex = 8;
-            this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // cPlace
             // 
@@ -159,12 +136,36 @@
             this.cTimeEnd.ReadOnly = true;
             this.cTimeEnd.Width = 80;
             // 
+            // btPrint
+            // 
+            this.btPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btPrint.BackgroundImage = global::CompensatoryTime.Properties.Resources.Print;
+            this.btPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btPrint.Location = new System.Drawing.Point(555, 428);
+            this.btPrint.Name = "btPrint";
+            this.btPrint.Size = new System.Drawing.Size(32, 32);
+            this.btPrint.TabIndex = 7;
+            this.btPrint.UseVisualStyleBackColor = true;
+            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btClose.Location = new System.Drawing.Point(593, 428);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(32, 32);
+            this.btClose.TabIndex = 8;
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
             // frmViewUserWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 622);
-            this.Controls.Add(this.button9);
+            this.ClientSize = new System.Drawing.Size(637, 472);
+            this.Controls.Add(this.btPrint);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.tbFio);
@@ -188,7 +189,7 @@
         private System.Windows.Forms.TextBox tbFio;
         private System.Windows.Forms.Label lUsers;
         private System.Windows.Forms.DataGridView dgvData;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btPrint;
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPlace;
         private System.Windows.Forms.DataGridViewTextBoxColumn cDeps;

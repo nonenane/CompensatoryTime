@@ -223,7 +223,7 @@
             // tbMoney
             // 
             this.tbMoney.Location = new System.Drawing.Point(19, 43);
-            this.tbMoney.MaxLength = 8;
+            this.tbMoney.MaxLength = 13;
             this.tbMoney.Name = "tbMoney";
             this.tbMoney.Size = new System.Drawing.Size(94, 20);
             this.tbMoney.TabIndex = 3;

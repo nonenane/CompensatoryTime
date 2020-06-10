@@ -107,6 +107,7 @@
             // btSelect
             // 
             this.btSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSelect.BackgroundImage = global::CompensatoryTime.Properties.Resources.tick;
             this.btSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btSelect.Location = new System.Drawing.Point(501, 586);
             this.btSelect.Name = "btSelect";

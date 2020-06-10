@@ -59,7 +59,6 @@ namespace CompensatoryTime
             return dtResult;
         }
 
-
         /// <summary>
         /// Получение Дат Инв
         /// </summary>
@@ -223,5 +222,102 @@ namespace CompensatoryTime
 
             return dtResult;
         }
+
+        /// <summary>
+        /// Перенос сотрудников на другую дату инвенты
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns>Таблица с данными</returns>        
+        public async Task<DataTable> transferKadrToNextInvent(int id, int id_kadr, int id_ttost, int result)
+        {
+            ap.Clear();
+            ap.Add(id);
+            ap.Add(id_kadr);
+            ap.Add(id_ttost);            
+            ap.Add(Nwuram.Framework.Settings.User.UserSettings.User.Id);
+            ap.Add(result);
+
+
+            DataTable dtResult = executeProcedure("[inventory].[transferKadrToNextInvent]",
+                 new string[5] {"@id","@id_kadr", "@id_ttost", "@id_user", "@result" },
+                 new DbType[5] { DbType.Int32, DbType.Int32, DbType.Int32, DbType.Int32, DbType.Int32 }, ap);
+
+            return dtResult;
+        }
+
+        /// <summary>
+        /// Запись, обновление и удаление настроек.
+        /// </summary>
+        /// <param name="id_value">Код значния</param>
+        /// <param name="type_value">Тип значения</param>
+        /// <param name="value_name">Название типа</param>
+        /// <param name="value">Значение</param>
+        /// <param name="comment">Комментарий</param>
+        public async Task<DataTable> setSettings(string id_value, string type_value, string value_name, string value, string comment)
+        {
+            ap.Clear();
+            ap.Add(ConnectionSettings.GetIdProgram());
+            ap.Add(id_value);
+            ap.Add(type_value);
+            ap.Add(value_name);
+            ap.Add(value);
+            ap.Add(comment);
+            ap.Add(false);
+
+            return executeProcedure("[inventory].[setSettings]",
+                new string[7] { "@id_prog", "@id_value", "@type_value", "@value_name", "@value", "@comment", "@isDel" },
+                new DbType[7] { DbType.Int32, DbType.String, DbType.String, DbType.String, DbType.String, DbType.String, DbType.Boolean }, ap);
+        }
+
+        /// <summary>
+        /// Получение настроек.
+        /// </summary>
+        /// <param name="id_value">Код значния</param>
+        public async Task<DataTable> getSettings(string id_value)
+        {
+            ap.Clear();
+            ap.Add(ConnectionSettings.GetIdProgram());
+            ap.Add(id_value);
+
+            return executeProcedure("[inventory].[getSettings]",
+                new string[2] { "@id_prog", "@id_value" },
+                new DbType[2] { DbType.Int32, DbType.String }, ap);
+        }
+
+        /// <summary>
+        /// Получение списка сотрудников которые отработали в морозилке за деньги!
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns>Таблица с данными</returns>        
+        public async Task<DataTable> getReportBonusPayment(int id_ttost)
+        {
+            ap.Clear();
+            ap.Add(id_ttost);
+
+            DataTable dtResult = executeProcedure("[inventory].[getReportBonusPayment]",
+                 new string[1] { "@id_ttost" },
+                 new DbType[1] { DbType.Int32 }, ap);
+
+            return dtResult;
+        }
+
+
+        /// <summary>
+        /// Получение списка сотрудников которые отработали сутки со сканером!
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns>Таблица с данными</returns>        
+        public async Task<DataTable> getReportDayWorkingUser(int id_ttost)
+        {
+            ap.Clear();
+            ap.Add(id_ttost);
+
+            DataTable dtResult = executeProcedure("[inventory].[getReportDayWorkingUser]",
+                 new string[1] { "@id_ttost" },
+                 new DbType[1] { DbType.Int32 }, ap);
+
+            return dtResult;
+        }
+
     }
 }

@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btClose = new System.Windows.Forms.Button();
-            this.btDel = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btEdit = new System.Windows.Forms.Button();
-            this.btAdd = new System.Windows.Forms.Button();
-            this.btViewWorkUser = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvData = new System.Windows.Forms.DataGridView();
@@ -58,109 +49,19 @@
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btPrintDaysWork = new System.Windows.Forms.Button();
+            this.btReportBonus = new System.Windows.Forms.Button();
+            this.btPrint = new System.Windows.Forms.Button();
+            this.btViewWorkUser = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.btEdit = new System.Windows.Forms.Button();
+            this.btTransfer = new System.Windows.Forms.Button();
+            this.btDel = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btClose
-            // 
-            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
-            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btClose.Location = new System.Drawing.Point(867, 565);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(32, 32);
-            this.btClose.TabIndex = 0;
-            this.btClose.UseVisualStyleBackColor = true;
-            // 
-            // btDel
-            // 
-            this.btDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btDel.BackgroundImage = global::CompensatoryTime.Properties.Resources.Trash;
-            this.btDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btDel.Location = new System.Drawing.Point(829, 565);
-            this.btDel.Name = "btDel";
-            this.btDel.Size = new System.Drawing.Size(32, 32);
-            this.btDel.TabIndex = 0;
-            this.btDel.UseVisualStyleBackColor = true;
-            this.btDel.Click += new System.EventHandler(this.btDel_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Location = new System.Drawing.Point(791, 565);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 32);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btEdit
-            // 
-            this.btEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btEdit.BackgroundImage = global::CompensatoryTime.Properties.Resources.Edit;
-            this.btEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btEdit.Location = new System.Drawing.Point(753, 565);
-            this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(32, 32);
-            this.btEdit.TabIndex = 0;
-            this.btEdit.UseVisualStyleBackColor = true;
-            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
-            // 
-            // btAdd
-            // 
-            this.btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btAdd.BackgroundImage = global::CompensatoryTime.Properties.Resources.Add;
-            this.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btAdd.Location = new System.Drawing.Point(715, 565);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(32, 32);
-            this.btAdd.TabIndex = 0;
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
-            // 
-            // btViewWorkUser
-            // 
-            this.btViewWorkUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btViewWorkUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btViewWorkUser.Location = new System.Drawing.Point(677, 565);
-            this.btViewWorkUser.Name = "btViewWorkUser";
-            this.btViewWorkUser.Size = new System.Drawing.Size(32, 32);
-            this.btViewWorkUser.TabIndex = 0;
-            this.btViewWorkUser.UseVisualStyleBackColor = true;
-            this.btViewWorkUser.Click += new System.EventHandler(this.btViewWorkUser_Click);
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button7.Location = new System.Drawing.Point(512, 565);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(32, 32);
-            this.button7.TabIndex = 0;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button8.Location = new System.Drawing.Point(474, 565);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(32, 32);
-            this.button8.TabIndex = 0;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.BackgroundImage = global::CompensatoryTime.Properties.Resources.Print;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button9.Location = new System.Drawing.Point(436, 565);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(32, 32);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -193,14 +94,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cSelect,
@@ -210,14 +111,14 @@
             this.cTypeExeption,
             this.cMoneyBonus,
             this.cDayBonus});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvData.Location = new System.Drawing.Point(12, 132);
             this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
@@ -225,6 +126,7 @@
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(887, 427);
             this.dgvData.TabIndex = 3;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             this.dgvData.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvData_ColumnWidthChanged);
             this.dgvData.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvData_RowPostPaint);
             this.dgvData.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvData_RowPrePaint);
@@ -276,10 +178,10 @@
             // cMoneyBonus
             // 
             this.cMoneyBonus.DataPropertyName = "Summa";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.cMoneyBonus.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.cMoneyBonus.DefaultCellStyle = dataGridViewCellStyle10;
             this.cMoneyBonus.FillWeight = 68.14815F;
             this.cMoneyBonus.HeaderText = "Вознаграждение денежное";
             this.cMoneyBonus.Name = "cMoneyBonus";
@@ -288,8 +190,8 @@
             // cDayBonus
             // 
             this.cDayBonus.DataPropertyName = "CountDays";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.cDayBonus.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cDayBonus.DefaultCellStyle = dataGridViewCellStyle11;
             this.cDayBonus.FillWeight = 68.14815F;
             this.cDayBonus.HeaderText = "Вознаграждение отгулы";
             this.cDayBonus.Name = "cDayBonus";
@@ -359,6 +261,102 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(457, 67);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // btPrintDaysWork
+            // 
+            this.btPrintDaysWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btPrintDaysWork.BackgroundImage = global::CompensatoryTime.Properties.Resources.Print;
+            this.btPrintDaysWork.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btPrintDaysWork.Location = new System.Drawing.Point(436, 565);
+            this.btPrintDaysWork.Name = "btPrintDaysWork";
+            this.btPrintDaysWork.Size = new System.Drawing.Size(32, 32);
+            this.btPrintDaysWork.TabIndex = 0;
+            this.btPrintDaysWork.UseVisualStyleBackColor = true;
+            this.btPrintDaysWork.Click += new System.EventHandler(this.btPrintDaysWork_Click);
+            // 
+            // btReportBonus
+            // 
+            this.btReportBonus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btReportBonus.BackgroundImage = global::CompensatoryTime.Properties.Resources.honor;
+            this.btReportBonus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btReportBonus.Location = new System.Drawing.Point(474, 565);
+            this.btReportBonus.Name = "btReportBonus";
+            this.btReportBonus.Size = new System.Drawing.Size(32, 32);
+            this.btReportBonus.TabIndex = 0;
+            this.btReportBonus.UseVisualStyleBackColor = true;
+            this.btReportBonus.Click += new System.EventHandler(this.btReportBonus_Click);
+            // 
+            // btPrint
+            // 
+            this.btPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btPrint.BackgroundImage = global::CompensatoryTime.Properties.Resources.microsoft_excel;
+            this.btPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btPrint.Location = new System.Drawing.Point(512, 565);
+            this.btPrint.Name = "btPrint";
+            this.btPrint.Size = new System.Drawing.Size(32, 32);
+            this.btPrint.TabIndex = 0;
+            this.btPrint.UseVisualStyleBackColor = true;
+            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
+            // 
+            // btViewWorkUser
+            // 
+            this.btViewWorkUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btViewWorkUser.BackgroundImage = global::CompensatoryTime.Properties.Resources.vision;
+            this.btViewWorkUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btViewWorkUser.Location = new System.Drawing.Point(677, 565);
+            this.btViewWorkUser.Name = "btViewWorkUser";
+            this.btViewWorkUser.Size = new System.Drawing.Size(32, 32);
+            this.btViewWorkUser.TabIndex = 0;
+            this.btViewWorkUser.UseVisualStyleBackColor = true;
+            this.btViewWorkUser.Click += new System.EventHandler(this.btViewWorkUser_Click);
+            // 
+            // btAdd
+            // 
+            this.btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAdd.BackgroundImage = global::CompensatoryTime.Properties.Resources.Add;
+            this.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btAdd.Location = new System.Drawing.Point(715, 565);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(32, 32);
+            this.btAdd.TabIndex = 0;
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
+            // 
+            // btEdit
+            // 
+            this.btEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btEdit.BackgroundImage = global::CompensatoryTime.Properties.Resources.Edit;
+            this.btEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btEdit.Location = new System.Drawing.Point(753, 565);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.Size = new System.Drawing.Size(32, 32);
+            this.btEdit.TabIndex = 0;
+            this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
+            // 
+            // btTransfer
+            // 
+            this.btTransfer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTransfer.BackgroundImage = global::CompensatoryTime.Properties.Resources.arrows;
+            this.btTransfer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btTransfer.Location = new System.Drawing.Point(791, 565);
+            this.btTransfer.Name = "btTransfer";
+            this.btTransfer.Size = new System.Drawing.Size(32, 32);
+            this.btTransfer.TabIndex = 0;
+            this.btTransfer.UseVisualStyleBackColor = true;
+            this.btTransfer.Click += new System.EventHandler(this.btTransfer_Click);
+            // 
+            // btDel
+            // 
+            this.btDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDel.BackgroundImage = global::CompensatoryTime.Properties.Resources.Trash;
+            this.btDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btDel.Location = new System.Drawing.Point(829, 565);
+            this.btDel.Name = "btDel";
+            this.btDel.Size = new System.Drawing.Size(32, 32);
+            this.btDel.TabIndex = 0;
+            this.btDel.UseVisualStyleBackColor = true;
+            this.btDel.Click += new System.EventHandler(this.btDel_Click);
+            // 
             // btUpdate
             // 
             this.btUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -370,6 +368,17 @@
             this.btUpdate.TabIndex = 0;
             this.btUpdate.UseVisualStyleBackColor = true;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btClose.Location = new System.Drawing.Point(867, 565);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(32, 32);
+            this.btClose.TabIndex = 0;
+            this.btClose.UseVisualStyleBackColor = true;
             // 
             // frmList
             // 
@@ -385,13 +394,13 @@
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btPrintDaysWork);
+            this.Controls.Add(this.btReportBonus);
+            this.Controls.Add(this.btPrint);
             this.Controls.Add(this.btViewWorkUser);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btEdit);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btTransfer);
             this.Controls.Add(this.btDel);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.btClose);
@@ -412,13 +421,13 @@
 
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Button btDel;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btTransfer;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btViewWorkUser;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btPrint;
+        private System.Windows.Forms.Button btReportBonus;
+        private System.Windows.Forms.Button btPrintDaysWork;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvData;

@@ -36,7 +36,8 @@ namespace CompensatoryTime.users
 
             ToolTip tp = new ToolTip();
             tp.SetToolTip(btClose, "Выход");
-            tp.SetToolTip(btSave, "Сохранить");            
+            tp.SetToolTip(btSave, "Сохранить");
+            tp.SetToolTip(btSelectUser, "Выбрать сотрудника");
         }
 
         private void frmAdd_Load(object sender, EventArgs e)
@@ -72,7 +73,9 @@ namespace CompensatoryTime.users
                 id_kadr = (int)row["id_kadr"];
                 tbFio.Text = (string)row["fio"];
                 cmbShop.SelectedValue = (int)row["id_shop"];
-                cmbTypeExeptions.SelectedValue = (int)row["id_shop"];
+                cmbTypeExeptions.SelectedValue = (int)row["id_ExceptionType"];
+                cmbTypeExeptions_SelectionChangeCommitted(null, null);
+
                 chbIsBonusValidate.Checked = (bool)row["isDop"];
                 if (row["Summa"] != DBNull.Value)
                 {
@@ -219,9 +222,6 @@ namespace CompensatoryTime.users
             isEditData = false;
             MessageBox.Show("Данные сохранены.", "Сохранение данных", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
-
-
-            this.DialogResult = DialogResult.OK;
         }
 
         private void cmbShop_SelectionChangeCommitted(object sender, EventArgs e)
@@ -263,8 +263,7 @@ namespace CompensatoryTime.users
         }
 
         private void btSelectUser_Click(object sender, EventArgs e)
-        {
-            id_kadr = 0;
+        {            
             frmSelect frmSelect = new frmSelect() { dateInvent = dateInvent };
             if (DialogResult.OK == frmSelect.ShowDialog())
             {

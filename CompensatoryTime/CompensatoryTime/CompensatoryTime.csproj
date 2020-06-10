@@ -73,6 +73,12 @@
     <Compile Include="users\frmSelect.Designer.cs">
       <DependentUpon>frmSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="users\frmTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users\frmTransfer.Designer.cs">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="users\frmViewUserWork.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="users\frmSelect.resx">
       <DependentUpon>frmSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users\frmTransfer.resx">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users\frmViewUserWork.resx">
       <DependentUpon>frmViewUserWork.cs</DependentUpon>
@@ -134,6 +143,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\honor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft-excel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
