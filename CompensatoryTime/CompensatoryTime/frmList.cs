@@ -1,5 +1,6 @@
 ﻿using Nwuram.Framework.Logging;
 using Nwuram.Framework.Settings.Connection;
+using Nwuram.Framework.Settings.User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +66,11 @@ namespace CompensatoryTime
                 cmbDateInvent.DataSource = task.Result.Copy();
                 cmbDateInvent.DisplayMember = "DateInventory";
                 cmbDateInvent.ValueMember = "id";
+            }
+
+            if (UserSettings.User.StatusCode.ToLower().Equals("оп"))
+            {
+                btAdd.Visible = btEdit.Visible = btDel.Visible = btTransfer.Visible = btReportBonus.Visible = false;
             }
 
             init_type();
