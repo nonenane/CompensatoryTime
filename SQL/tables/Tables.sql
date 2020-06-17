@@ -74,6 +74,8 @@ CREATE TABLE [inventory].[j_CalcCompensatoryTime](
 	[CompensatoryTime]		numeric(6,1)	not null,
 	[id_Creator]			int				not null,
 	[DateCreate]			datetime		not null,
+	[id_Editor]				int				null,
+	[DateEdit]				datetime		null,
  CONSTRAINT [PK_j_CalcCompensatoryTime] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
@@ -82,6 +84,9 @@ CREATE TABLE [inventory].[j_CalcCompensatoryTime](
 GO
 
 ALTER TABLE [inventory].[j_CalcCompensatoryTime] ADD CONSTRAINT FK_j_CalcCompensatoryTime_id_Creator FOREIGN KEY (id_Creator)  REFERENCES [dbo].[ListUsers] (id)
+GO
+
+ALTER TABLE [inventory].[j_CalcCompensatoryTime] ADD CONSTRAINT FK_j_CalcCompensatoryTime_id_Editor FOREIGN KEY (id_Editor)  REFERENCES [dbo].[ListUsers] (id)
 GO
 
 ALTER TABLE [inventory].[j_CalcCompensatoryTime] ADD CONSTRAINT FK_j_CalcCompensatoryTime_id_kadr FOREIGN KEY (id_kadr)  REFERENCES [dbo].[s_kadr] (id)
