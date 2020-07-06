@@ -693,6 +693,15 @@ namespace CompensatoryTime
                 return;
             }
 
+            EnumerableRowCollection<DataRow> rowCollectToTable = task.Result.AsEnumerable().Where(r => r.Field<object>("timeStart") != null && r.Field<object>("timeEnd") != null);
+            if(rowCollectToTable.Count()==0)
+            {
+                MessageBox.Show("Нет данных для формирования отчёта.", "Печать", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataTable dtReport = rowCollectToTable.CopyToDataTable();
+
             Nwuram.Framework.ToExcelNew.ExcelUnLoad report = new Nwuram.Framework.ToExcelNew.ExcelUnLoad();
 
             int indexRow = 1;
@@ -729,13 +738,13 @@ namespace CompensatoryTime
             report.SetCellAlignmentToJustify(indexRow, 1, indexRow, maxCol);
             indexRow++;
 
-            var groupShop = task.Result.AsEnumerable().GroupBy(r => new { id_Shop = r.Field<int>("id_Shop"), nameShop = r.Field<string>("nameShop") })
+            var groupShop = dtReport.AsEnumerable().GroupBy(r => new { id_Shop = r.Field<int>("id_Shop"), nameShop = r.Field<string>("nameShop") })
                 .Select(s => new { s.Key.id_Shop, s.Key.nameShop })
                 .OrderBy(r => r.id_Shop);
 
             foreach (var gShop in groupShop)
             {
-                var groupKadr = task.Result.AsEnumerable()
+                var groupKadr = dtReport.AsEnumerable()
                     .Where(r => r.Field<int>("id_Shop") == gShop.id_Shop)
                     .GroupBy(r => new { id_kadr = r.Field<int>("id_kadr"), fio = r.Field<string>("fio") })
                     .Select(s => new { s.Key.id_kadr, s.Key.fio })
@@ -744,7 +753,7 @@ namespace CompensatoryTime
                 int startIndexShop = indexRow;
                 foreach (var gKadr in groupKadr)
                 {
-                    EnumerableRowCollection<DataRow> rowCollect = task.Result.AsEnumerable()
+                    EnumerableRowCollection<DataRow> rowCollect = dtReport.AsEnumerable()
                         .Where(r => r.Field<int>("id_Shop") == gShop.id_Shop && r.Field<int>("id_kadr") == gKadr.id_kadr)
                         .OrderBy(r => r.Field<DateTime>("timeStart"));
 
@@ -786,6 +795,32 @@ namespace CompensatoryTime
         private void btClose_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void dgvData_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == cSelect.Index)
+            {
+                if (dtData == null || dtData.DefaultView.Count == 0) return;
+
+                EnumerableRowCollection<DataRow> rowCollect = dtData.AsEnumerable().Where(r => r.Field<bool>("isSelect"));
+                if (rowCollect.Count() == 0)
+                {
+                    foreach (DataRowView row in dtData.DefaultView)
+                    {
+                        row["isSelect"] = true;
+                    }
+                    dtData.AcceptChanges();
+                }
+                else
+                {
+                    foreach (DataRow row in rowCollect)
+                    {
+                        row["isSelect"] = false;
+                    }
+                    dtData.AcceptChanges();
+                }
+            }
         }
     }
 }
