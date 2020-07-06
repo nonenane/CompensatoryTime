@@ -11,7 +11,7 @@ GO
 -- Edit date: <2020-06-10>
 -- Description: ѕолучение списка сотрудников которые отработали в морозилке за деньги!
 -- =============================================
-CREATE PROCEDURE [inventory].[getReportBonusPayment] 
+ALTER PROCEDURE [inventory].[getReportBonusPayment] 
 	@id_ttost int 
 AS
 BEGIN
@@ -29,7 +29,7 @@ from
 		inner join dbo.j_spacing s on s.id_spacing = ts.id
 		left join dbo.s_kadr k on k.id = s.id_kadr
 		left join dbo.departments d on d.id = k.id_departments
-where ts.id_ttost = @id_ttost --and p.payment is not null and p.payment <> 0
+where ts.id_ttost = @id_ttost and p.payment is not null and p.payment <> 0
 
 END
 

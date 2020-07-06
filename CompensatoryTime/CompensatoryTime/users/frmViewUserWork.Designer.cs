@@ -139,7 +139,7 @@
             // btPrint
             // 
             this.btPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btPrint.BackgroundImage = global::CompensatoryTime.Properties.Resources.Print;
+            this.btPrint.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Print;
             this.btPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btPrint.Location = new System.Drawing.Point(555, 428);
             this.btPrint.Name = "btPrint";
@@ -151,7 +151,7 @@
             // btClose
             // 
             this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
+            this.btClose.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Exit;
             this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btClose.Location = new System.Drawing.Point(593, 428);
             this.btClose.Name = "btClose";

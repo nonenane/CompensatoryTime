@@ -37,7 +37,7 @@
             // btSave
             // 
             this.btSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSave.BackgroundImage = global::CompensatoryTime.Properties.Resources.Save;
+            this.btSave.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Save;
             this.btSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btSave.Location = new System.Drawing.Point(246, 43);
             this.btSave.Name = "btSave";
@@ -49,7 +49,7 @@
             // btClose
             // 
             this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
+            this.btClose.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Exit;
             this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btClose.Location = new System.Drawing.Point(284, 43);
             this.btClose.Name = "btClose";

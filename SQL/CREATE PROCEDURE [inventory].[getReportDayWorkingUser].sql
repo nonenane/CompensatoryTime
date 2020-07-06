@@ -11,7 +11,7 @@ GO
 -- Edit date: <2020-06-10>
 -- Description: Получение списка сотрудников которые отработали сутки со сканером!
 -- =============================================
-CREATE PROCEDURE [inventory].[getReportDayWorkingUser] 
+ALTER PROCEDURE [inventory].[getReportDayWorkingUser] 
 	@id_ttost int 
 AS
 BEGIN
@@ -42,7 +42,7 @@ select
 	s.id_kadr,
 	s.id_spacing
 from dbo.j_spacing  s inner join dbo.j_tspacing ts on ts.id = s.id_spacing
-where ts.id_ttost = 1804
+where ts.id_ttost = @id_ttost
 group by 
 	s.id_kadr,
 	s.id,

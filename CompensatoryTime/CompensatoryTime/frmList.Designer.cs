@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvData = new System.Windows.Forms.DataGridView();
@@ -94,14 +94,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cSelect,
@@ -111,14 +111,14 @@
             this.cTypeExeption,
             this.cMoneyBonus,
             this.cDayBonus});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData.Location = new System.Drawing.Point(12, 132);
             this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
@@ -178,10 +178,10 @@
             // cMoneyBonus
             // 
             this.cMoneyBonus.DataPropertyName = "Summa";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "N2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.cMoneyBonus.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.cMoneyBonus.DefaultCellStyle = dataGridViewCellStyle2;
             this.cMoneyBonus.FillWeight = 68.14815F;
             this.cMoneyBonus.HeaderText = "Вознаграждение денежное";
             this.cMoneyBonus.Name = "cMoneyBonus";
@@ -190,8 +190,8 @@
             // cDayBonus
             // 
             this.cDayBonus.DataPropertyName = "CountDays";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.cDayBonus.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cDayBonus.DefaultCellStyle = dataGridViewCellStyle3;
             this.cDayBonus.FillWeight = 68.14815F;
             this.cDayBonus.HeaderText = "Вознаграждение отгулы";
             this.cDayBonus.Name = "cDayBonus";
@@ -264,7 +264,7 @@
             // btPrintDaysWork
             // 
             this.btPrintDaysWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btPrintDaysWork.BackgroundImage = global::CompensatoryTime.Properties.Resources.Print;
+            this.btPrintDaysWork.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Print;
             this.btPrintDaysWork.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btPrintDaysWork.Location = new System.Drawing.Point(436, 565);
             this.btPrintDaysWork.Name = "btPrintDaysWork";
@@ -276,7 +276,7 @@
             // btReportBonus
             // 
             this.btReportBonus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btReportBonus.BackgroundImage = global::CompensatoryTime.Properties.Resources.honor;
+            this.btReportBonus.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.honor;
             this.btReportBonus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btReportBonus.Location = new System.Drawing.Point(474, 565);
             this.btReportBonus.Name = "btReportBonus";
@@ -288,7 +288,7 @@
             // btPrint
             // 
             this.btPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btPrint.BackgroundImage = global::CompensatoryTime.Properties.Resources.microsoft_excel;
+            this.btPrint.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.microsoft_excel;
             this.btPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btPrint.Location = new System.Drawing.Point(512, 565);
             this.btPrint.Name = "btPrint";
@@ -300,7 +300,7 @@
             // btViewWorkUser
             // 
             this.btViewWorkUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btViewWorkUser.BackgroundImage = global::CompensatoryTime.Properties.Resources.vision;
+            this.btViewWorkUser.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.vision;
             this.btViewWorkUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btViewWorkUser.Location = new System.Drawing.Point(677, 565);
             this.btViewWorkUser.Name = "btViewWorkUser";
@@ -312,7 +312,7 @@
             // btAdd
             // 
             this.btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btAdd.BackgroundImage = global::CompensatoryTime.Properties.Resources.Add;
+            this.btAdd.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Add;
             this.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btAdd.Location = new System.Drawing.Point(715, 565);
             this.btAdd.Name = "btAdd";
@@ -324,7 +324,7 @@
             // btEdit
             // 
             this.btEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btEdit.BackgroundImage = global::CompensatoryTime.Properties.Resources.Edit;
+            this.btEdit.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Edit;
             this.btEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btEdit.Location = new System.Drawing.Point(753, 565);
             this.btEdit.Name = "btEdit";
@@ -336,7 +336,7 @@
             // btTransfer
             // 
             this.btTransfer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btTransfer.BackgroundImage = global::CompensatoryTime.Properties.Resources.arrows;
+            this.btTransfer.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.arrows;
             this.btTransfer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btTransfer.Location = new System.Drawing.Point(791, 565);
             this.btTransfer.Name = "btTransfer";
@@ -348,7 +348,7 @@
             // btDel
             // 
             this.btDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btDel.BackgroundImage = global::CompensatoryTime.Properties.Resources.Trash;
+            this.btDel.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Trash;
             this.btDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btDel.Location = new System.Drawing.Point(829, 565);
             this.btDel.Name = "btDel";
@@ -360,7 +360,7 @@
             // btUpdate
             // 
             this.btUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btUpdate.BackgroundImage = global::CompensatoryTime.Properties.Resources.refresh;
+            this.btUpdate.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.refresh;
             this.btUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btUpdate.Location = new System.Drawing.Point(867, 29);
             this.btUpdate.Name = "btUpdate";
@@ -372,19 +372,21 @@
             // btClose
             // 
             this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
+            this.btClose.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Exit;
             this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btClose.Location = new System.Drawing.Point(867, 565);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(32, 32);
             this.btClose.TabIndex = 0;
             this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // frmList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 609);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbShop);
             this.Controls.Add(this.label3);
@@ -406,6 +408,8 @@
             this.Controls.Add(this.btClose);
             this.MinimizeBox = false;
             this.Name = "frmList";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Справочник исключений";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmList_FormClosing);

@@ -95,7 +95,7 @@
             // btClose
             // 
             this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.BackgroundImage = global::CompensatoryTime.Properties.Resources.Exit;
+            this.btClose.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.Exit;
             this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btClose.Location = new System.Drawing.Point(539, 586);
             this.btClose.Name = "btClose";
@@ -107,7 +107,7 @@
             // btSelect
             // 
             this.btSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSelect.BackgroundImage = global::CompensatoryTime.Properties.Resources.tick;
+            this.btSelect.BackgroundImage = global::DicCompensatoryTime.Properties.Resources.tick;
             this.btSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btSelect.Location = new System.Drawing.Point(501, 586);
             this.btSelect.Name = "btSelect";

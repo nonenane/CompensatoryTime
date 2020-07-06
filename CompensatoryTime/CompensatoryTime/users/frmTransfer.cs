@@ -36,7 +36,9 @@ namespace CompensatoryTime.users
             task.Wait();
             if (task.Result != null)
             {
-                int cntDay = 270;
+                //int cntDay = 0;
+                string value = getSettings("dkor");
+                int cntDay = int.Parse(value);
 
                 EnumerableRowCollection<DataRow> rowCollect = task.Result.AsEnumerable()
                     .Where(r => r.Field<int>("id") != id_ttost && r.Field<DateTime>("DateInventory").AddDays(cntDay).Date >= DateTime.Now.Date)
@@ -105,6 +107,15 @@ namespace CompensatoryTime.users
 
             MessageBox.Show("Данные скопированы.", "Копирование исключений", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
+        }
+
+        private string getSettings(string id_value)
+        {
+            Task<DataTable> task = Config.hCntMain.getSettings(id_value);
+            task.Wait();
+            if (task != null && task.Result.Rows.Count > 0)
+                return task.Result.Rows[0]["value"].ToString();
+            return "0";
         }
     }
 }

@@ -121,7 +121,7 @@ namespace CompensatoryTime
 
                     DataRow row = dtResult.NewRow();
 
-                    row["cName"] = "Все магазины";
+                    row["cName"] = "Все отделы";
                     row["id"] = 0;
                     row["isMain"] = 0;
                     dtResult.Rows.Add(row);

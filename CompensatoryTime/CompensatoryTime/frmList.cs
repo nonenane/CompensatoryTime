@@ -182,7 +182,8 @@ namespace CompensatoryTime
         {
             if (dtData == null || dtData.Rows.Count == 0)
             {
-                btAdd.Enabled = btViewWorkUser.Enabled = btEdit.Enabled = btDel.Enabled = btTransfer.Enabled = false;
+                //btAdd.Enabled = 
+                    btViewWorkUser.Enabled = btEdit.Enabled = btDel.Enabled = btTransfer.Enabled = false;
                 btPrintDaysWork.Enabled =
                     btReportBonus.Enabled =
                     btPrint.Enabled = true;
@@ -225,7 +226,7 @@ namespace CompensatoryTime
             finally
             {
 
-                btAdd.Enabled = btEdit.Enabled = btDel.Enabled = DateTime.Parse(cmbDateInvent.Text).AddDays(countDayForEdit).Date <= DateTime.Now.Date;
+                btAdd.Enabled = btEdit.Enabled = btDel.Enabled = DateTime.Parse(cmbDateInvent.Text).AddDays(countDayForEdit).Date >= DateTime.Now.Date;
 
 
                 btViewWorkUser.Enabled = dtData.DefaultView.Count != 0;
@@ -461,6 +462,7 @@ namespace CompensatoryTime
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (isLoadData) return;
+            if (e.RowIndex == -1) return;
             if (e.ColumnIndex == cSelect.Index)
             {
                 DataGridViewCheckBoxCell ch1 = new DataGridViewCheckBoxCell();
@@ -489,7 +491,7 @@ namespace CompensatoryTime
             task.Wait();
             if (task != null && task.Result.Rows.Count > 0)
                 return task.Result.Rows[0]["value"].ToString();
-            return "";
+            return "0";
         }
 
         private void validateSettings(string id_value,string type_value,string value_name, string value, string comment, bool isInsertData)
@@ -781,6 +783,9 @@ namespace CompensatoryTime
             report.Show();
         }
 
-
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
     }
 }
