@@ -7,7 +7,7 @@ GO
 -- Create date: 2020-04-25
 -- Description:	Запись исключения сотрудника в журнал исключений
 -- =============================================
-CREATE PROCEDURE [inventory].[setException]		 
+ALTER PROCEDURE [inventory].[setException]		 
 	@id int,
 	@id_kadr int,
 	@id_shop int,
@@ -15,7 +15,7 @@ CREATE PROCEDURE [inventory].[setException]
 	@id_ExceptionType int,
 	@isDop bit,
 	@Summa numeric(11,2) = null,
-	@CountDays numeric(6,1) = null,	
+	@CountDays numeric(6,2) = null,	
 	@id_user int,
 	@result int = 0,
 	@isDel int
