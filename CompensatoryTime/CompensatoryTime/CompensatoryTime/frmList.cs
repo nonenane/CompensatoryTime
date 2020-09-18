@@ -599,6 +599,14 @@ namespace CompensatoryTime
                 indexRow++;
             }
 
+            report.AddSingleValue("ИТОГО:", indexRow, 4);
+            report.SetFontBold(indexRow, 4, indexRow, 4);
+            report.SetCellAlignmentToRight(indexRow, 4, indexRow, 4);
+
+            decimal totalsum = dtData.DefaultView.ToTable().AsEnumerable().Where(r=>r.Field<decimal?>("Summa") is decimal).Sum(r => r.Field<decimal>("Summa"));
+            report.AddSingleValueObject(totalsum, indexRow, 5);
+            report.SetCellAlignmentToCenter(indexRow, 5, indexRow, 5);
+            report.SetBorders(indexRow, 4, indexRow, 5);
             report.Show();
         }
 
@@ -630,7 +638,7 @@ namespace CompensatoryTime
 
             report.Merge(indexRow, 1, indexRow, maxCol);
             //report.SetWrapText(indexRow, 1, indexRow, 1);
-            report.AddSingleValue($"Премиям за подсчет холодильных камер", indexRow, 1);
+            report.AddSingleValue($"Отчет по премиям за подсчет холодильных камер", indexRow, 1);
             report.SetFontBold(indexRow, 1, indexRow, 1);
             report.SetFontSize(indexRow, 1, indexRow, 1, 16);
             report.SetCellAlignmentToCenter(indexRow, 1, indexRow, 1);
@@ -676,6 +684,14 @@ namespace CompensatoryTime
                 indexRow++;
                 npp++;
             }
+
+            decimal totalsum = task.Result.AsEnumerable().Sum(r => r.Field<decimal>("payment"));
+            report.AddSingleValue("ИТОГО:", indexRow, 4);
+            report.SetFontBold(indexRow, 4, indexRow, 4);
+            report.SetCellAlignmentToRight(indexRow, 4, indexRow, 4);
+            report.AddSingleValueObject(totalsum, indexRow, 5);
+            report.SetCellAlignmentToCenter(indexRow, 5, indexRow, 5);
+            report.SetBorders(indexRow, 4, indexRow, 5);
 
             report.Show();
         }
