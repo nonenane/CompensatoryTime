@@ -72,7 +72,8 @@ namespace CompensatoryTime.users
                 id = (int)row["id"];
                 id_kadr = (int)row["id_kadr"];
                 tbFio.Text = (string)row["fio"];
-                cmbShop.SelectedValue = (int)row["id_shop"];
+                //cmbShop.SelectedValue = (int)row["id_shop"];
+                rbX14.Checked = !(rbK21.Checked = (int)row["id_shop"] == 1);
                 cmbTypeExeptions.SelectedValue = (int)row["id_ExceptionType"];
                 cmbTypeExeptions_SelectionChangeCommitted(null, null);
 
@@ -129,10 +130,11 @@ namespace CompensatoryTime.users
                 return;
             }
 
-            if (cmbShop.SelectedIndex == -1)
+            //if (cmbShop.SelectedIndex == -1)
+            if(!rbX14.Checked && !rbK21.Checked)
             {
                 MessageBox.Show($"Необходимо выбрать \"{lShop.Text}\"", "Ошибка сохранения", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbShop.Focus();
+                //cmbShop.Focus();
                 return;
             }
 
@@ -162,8 +164,9 @@ namespace CompensatoryTime.users
             decimal? countDay = null;
             if (rbDays.Checked) countDay = decimal.Parse(tbDays.Text);
             if (rbMoney.Checked) summa = decimal.Parse(tbMoney.Text);
+            int id_shop = rbK21.Checked ? 1 : 2;
 
-            Task<DataTable> task = Config.hCntMain.setException(id,id_kadr,(int)cmbShop.SelectedValue,id_ttost,(int)cmbTypeExeptions.SelectedValue,chbIsBonusValidate.Checked, summa, countDay, false, 0);
+            Task<DataTable> task = Config.hCntMain.setException(id,id_kadr, id_shop, id_ttost,(int)cmbTypeExeptions.SelectedValue,chbIsBonusValidate.Checked, summa, countDay, false, 0);
             task.Wait();
 
             DataTable dtResult = task.Result;

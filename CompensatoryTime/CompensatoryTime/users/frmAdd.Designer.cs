@@ -47,6 +47,8 @@
             this.tbMoney = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.rbX14 = new System.Windows.Forms.RadioButton();
+            this.rbK21 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,10 +126,11 @@
             // 
             this.cmbShop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(130, 58);
+            this.cmbShop.Location = new System.Drawing.Point(12, 247);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(213, 21);
             this.cmbShop.TabIndex = 8;
+            this.cmbShop.Visible = false;
             this.cmbShop.SelectionChangeCommitted += new System.EventHandler(this.cmbShop_SelectionChangeCommitted);
             // 
             // lShop
@@ -248,11 +251,35 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "руб.";
             // 
+            // rbX14
+            // 
+            this.rbX14.AutoSize = true;
+            this.rbX14.Location = new System.Drawing.Point(180, 60);
+            this.rbX14.Name = "rbX14";
+            this.rbX14.Size = new System.Drawing.Size(44, 17);
+            this.rbX14.TabIndex = 13;
+            this.rbX14.TabStop = true;
+            this.rbX14.Text = "X14";
+            this.rbX14.UseVisualStyleBackColor = true;
+            // 
+            // rbK21
+            // 
+            this.rbK21.AutoSize = true;
+            this.rbK21.Location = new System.Drawing.Point(130, 60);
+            this.rbK21.Name = "rbK21";
+            this.rbK21.Size = new System.Drawing.Size(44, 17);
+            this.rbK21.TabIndex = 12;
+            this.rbK21.TabStop = true;
+            this.rbK21.Text = "K21";
+            this.rbK21.UseVisualStyleBackColor = true;
+            // 
             // frmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 284);
+            this.Controls.Add(this.rbX14);
+            this.Controls.Add(this.rbK21);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chbIsBonusValidate);
             this.Controls.Add(this.cmbTypeExeptions);
@@ -303,5 +330,7 @@
         private System.Windows.Forms.TextBox tbMoney;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton rbX14;
+        private System.Windows.Forms.RadioButton rbK21;
     }
 }

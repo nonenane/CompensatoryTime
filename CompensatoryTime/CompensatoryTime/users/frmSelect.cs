@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nwuram.Framework.Settings.Connection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace CompensatoryTime.users
         public frmSelect()
         {
             InitializeComponent();
+            if (Config.hCntMain == null)
+                Config.hCntMain = new Procedures(ConnectionSettings.GetServer(), ConnectionSettings.GetDatabase(), ConnectionSettings.GetUsername(), ConnectionSettings.GetPassword(), ConnectionSettings.ProgramName);
+
+            if (Config.hCntSecond == null)
+                Config.hCntSecond = new Procedures(ConnectionSettings.GetServer("2"), ConnectionSettings.GetDatabase("2"), ConnectionSettings.GetUsername(), ConnectionSettings.GetPassword(), ConnectionSettings.ProgramName);
+
 
             ToolTip tp = new ToolTip();
             tp.SetToolTip(btClose, "Выход");
